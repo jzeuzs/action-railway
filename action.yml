@@ -1,0 +1,17 @@
+name: 'Deploy to Railway'
+description: 'A Github Action to deploy to Railway'
+
+inputs:
+  railway_token:
+    description: 'The Railway Token'
+    required: false
+
+outputs:
+  status:
+    description: ''
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.railway_token }}
