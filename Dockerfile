@@ -4,5 +4,6 @@ RUN apt-get update -y && apt-get install -y curl
 RUN curl -fsSL https://railway.app/install.sh | sh
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
