@@ -1,4 +1,4 @@
-#!/bin/sh -1
+#!/bin/sh -l
 
 if [ $1 ]; then
     export RAILWAY_TOKEN=$1
