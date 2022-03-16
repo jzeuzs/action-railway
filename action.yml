@@ -1,6 +1,10 @@
 name: 'Deploy to Railway'
 description: 'A Github Action to deploy to Railway'
 
+branding:
+  icon: check
+  color: gray-dark
+
 inputs:
   railway_token:
     description: 'The Railway Token'
