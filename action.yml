@@ -9,6 +9,9 @@ inputs:
   railway_token:
     description: 'The Railway Token'
     required: false
+  railway_service_name:
+    description: 'The Railway Service Name'
+    required: false
 
 outputs:
   status:
@@ -17,5 +20,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
+  args:  
     - ${{ inputs.railway_token }}
+    - ${{ inputs.railway_service_name }}
