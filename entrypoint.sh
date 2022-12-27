@@ -1,11 +1,13 @@
 #!/bin/sh -l
 
-if [ -n $1 ]; then
+if [ $1 ]; then
     export RAILWAY_TOKEN=$1
+    echo "RAILWAY_TOKEN"
 fi
 
-if [ -n $2 ]; then
+if [ $2 ]; then
     railway up --service=$2 --detach || error_code=$?
+    echo "RAILWAY_SERVICE"
 else
     railway up --detach || error_code=$?
 fi
